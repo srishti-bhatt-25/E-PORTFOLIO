@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srishti Bhatt Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(34, 125, 190);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(5, 5, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: cyan;
+            font-size: 1.08rem;
+        }
+
+        main hr {
+            background-color: rgb(13, 13, 79);
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 23px 0;
+        }
+
+        .firstsection>div {
+            width: 60%;
+            margin: 60px;
+        }
+
+        .leftsection {
+            font-size: 3rem;
+            justify-content: center;
+            margin: 80px 0;
+        }
+
+        .rightsection img {
+            width: 650px;
+            margin: auto;
+        }
+
+        .purple {
+            color: rgb(3, 11, 61);
+        }
+
+        .secondsection, .about, .contact, .achievements, .projects, .resume-section {
+            max-width: 80vw;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .achievements ul, .projects ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .achievements li, .projects li {
+            margin: 10px 0;
+        }
+
+        .resume-section a {
+            color: cyan;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .resume-section a:hover {
+            text-decoration: underline;
+        }
+
+        .form-input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-btn {
+            background-color: rgb(3, 11, 61);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: rgb(34, 125, 190);
+        }
+
+        .about{
+            color: rgb(9, 9, 76);
+        }
+        .achievements{
+            color: rgb(32, 6, 73);
+        }
+        .contact{
+            color: rgb(4, 4, 64);
+        }
+        .resume-section{
+            color: rgb(8, 8, 60);
+        }
+        .projects{
+            color: rgb(4, 5, 64);
+        }
+
+        /* New Video Section */
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .video-section video {
+            width: 320px; /* Portrait video size */
+            height: 560px;
+            object-fit: cover; /* Ensures it maintains aspect ratio */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">SRISHTI'S PORTFOLIO</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple"></br>
+                    <h3>Srishti Bhatt</h3>
+                </span>
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="sri3.png.webp" alt="Srishti Bhatt">
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Video Section for Introduction -->
+        <section class="video-section">
+            <video controls>
+                <source src="intro_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <hr>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h1>About Me</h1>
+            <p><strong>Education:</strong></p>
+            <p>Srishti Bhatt is a passionate Computer Science Engineering student at Graphic Era Hill University with a strong background in programming languages like C, C++, and Python. She has participated in renowned events such as the Google Girl Hackathon and qualified for the AlgoUniversity Tech Fellowship. Srishti is also an active contributor to GirlScript Summer of Code (GSSoc)-2024 and has worked on impactful projects like the Cyber Safe Cafe Management System and Smart PhoneBook application.
+
+            </br>  In addition to her technical skills, Srishti serves as a Campus Ambassador for the EDC Cell of IIT Delhi, where she fosters innovation and entrepreneurship among her peers. She also holds leadership roles, such as being the Deputy Secretary General at DSBMUN. With a passion for public speaking, nature exploration, and problem-solving, Srishti is committed to continuous learning and is poised to make a meaningful impact in the tech and entrepreneurial spaces.
+                
+            </p>
+                
+        </section>
+
+        <hr>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements">
+            <h1>Achievements</h1>
+            <ul>
+                <li>Participated in Google Girl Hackathon and advanced to the coding round.</li>
+                <li>Qualified Stage-1 coding round of the AlgoUniversity Tech Fellowship (Sept 2021).</li>
+                <li>Qualified Stage-1 aptitude test, Round 1 of Naukri Campus Young Turk.</li>
+                <li>Innovative Idea selected at the State Level by the National Innovation Foundation (Dec 2020).</li>
+                <li>Certified B Certificate Holder of National Service Scheme (NSS).</li>
+                <li>Contributor at GirlScript Summer of Code (GSSoC) 2024.</li>
+                <li>Appointed as Deputy Secretary General at DSBMUN.</li>
+                <li>Completed "Exploring the Relationship between UI and UX Design" by Infosys Springboard.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h1>Projects</h1>
+            <ul>
+                <li><strong>Cyber Safe Cafe Management System:</strong> Developed a secure and efficient management system to control internet usage in cyber cafes using Python, MySQL. Enhanced cybersecurity and reduced privacy issues by 30%.</li>
+                <li><strong>Smart PhoneBook:</strong> A phonebook application built in C using arrays, structures, and basic algorithms (sorting, searching) for efficient contact management.</li>
+                <li><strong>MyCV Search:</strong> A Google clone created using HTML and CSS, which redirects any search to my resume.</li>
+                <li><strong>Breast Cancer Prediction Model (in progress):</strong> Currently developing a model to predict breast cancer using machine learning techniques.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section">
+            <h1>Resume</h1>
+            <p>You can download my resume here:</p>
+            <a href="Srishti_Bhatt_Resume.pdf" download>Download Resume</a>
+        </section>
+
+        <hr>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h1>Contact Me</h1>
+            <!-- Contact Form -->
+            <form action="submit_form.php" method="POST">
+                <input type="text" class="form-input" name="name" placeholder="Your Name" required>
+                <input type="email" class="form-input" name="email" placeholder="Your Email" required>
+                <textarea class="form-input" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <!-- Contact Info Section -->
+            <div class="contact-info">
+                <h2>Alternatively, you can reach me through:</h2>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:srishtibhatt100@gmail.com" style="color: cyan;">srishtibhatt100@gmail.com</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+919548121588" style="color: cyan;">9548121588</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/srishti-bhatt-60a3ba220/" target="_blank" style="color: cyan;">LinkedIn</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/srishti-bhatt-25" target="_blank" style="color: cyan;">GitHub</a></li>
+                    <li><strong>Instagram:</strong> <a href="https://www.instagram.com/sri._.krise/" target="_blank" style="color: cyan;">Instagram</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>I am a Quick Learner</i> ', '&amp; I have a passion for Creativity!'],
+            typeSpeed: 60,
+        });
+    </script>
+</body>
+
+</html>
