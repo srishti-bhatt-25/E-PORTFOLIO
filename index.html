@@ -36,6 +36,7 @@
         nav ul li {
             list-style: none;
             margin: 0 23px;
+            position: relative;
         }
 
         nav ul li a {
@@ -46,6 +47,30 @@
         nav ul li a:hover {
             color: cyan;
             font-size: 1.08rem;
+        }
+
+        nav ul li .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(5, 5, 62);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        nav ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        nav ul li .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav ul li .dropdown-content a:hover {
+            color: cyan;
+            background-color: rgb(3, 11, 61);
         }
 
         main hr {
@@ -129,20 +154,56 @@
             background-color: rgb(34, 125, 190);
         }
 
-        .about{
+        .about {
             color: rgb(9, 9, 76);
         }
-        .achievements{
+
+        .achievements {
             color: rgb(32, 6, 73);
         }
-        .contact{
+
+        .contact {
             color: rgb(4, 4, 64);
         }
-        .resume-section{
+
+        .resume-section {
             color: rgb(8, 8, 60);
         }
-        .projects{
+
+        .projects {
             color: rgb(4, 5, 64);
+        }
+
+        /* Animation for typing effect */
+        .typing-effect {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: rgb(3, 11, 61);
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0; /* Initially width is 0 to start animation */
+            display: inline-block;
+        }
+
+        .typing-effect span {
+            border-right: 3px solid cyan;
+            animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
         }
 
         /* New Video Section */
@@ -160,6 +221,11 @@
             object-fit: cover; /* Ensures it maintains aspect ratio */
             border-radius: 10px;
         }
+
+        /* New Dropdown Section */
+        nav ul li .dropdown-content a {
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 
@@ -175,120 +241,113 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#resume">Resume</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <!-- New Dropdown Section for Learnings -->
+                    <li>
+                        <a href="#">Learnings</a>
+                        <div class="dropdown-content">
+                            <a href="week1.html">Week 1</a>
+                            <a href="week2.html">Week 2</a>
+                            <a href="week3.html">Week 3</a>
+                            <a href="#">Week 4</a>
+                            <a href="#">Week 5</a>
+                            <a href="#">Week 6</a>
+                            <a href="#">Week 7</a>
+                            <a href="#">Week 8</a>
+                            <a href="#">Week 9</a>
+                            <a href="#">Week 10</a>
+                            <a href="#">Week 11</a>
+                            <a href="#">Week 12</a>
+                            <a href="#">Week 13</a>
+                            <a href="#">Week 14</a>
+                            <a href="#">Week 15</a>
+                        </div>
+                    </li>
+                    <!-- New Dropdown Section for Assignments -->
+                    <li>
+                        <a href="#">Assignments</a>
+                        <div class="dropdown-content">
+                            <a href="assignment1.html">Assignment 1</a>
+                            <a href="assignment2.html">Assignment 2</a>
+                            <a href="assignment3.html">Assignment 3</a>
+                            <a href="assignment4.html">Assignment 4</a>
+                            <a href="assignment5.html">Assignment 5</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <main>
         <section class="firstsection">
             <div class="leftsection">
                 Hi, My name is <span class="purple"></br>
                     <h3>Srishti Bhatt</h3>
                 </span>
-                <span id="element"></span>
+                <div class="typing-effect">
+                    <span id="element">I am a passionate computer science enthusiast!</span>
+                </div>
             </div>
             <div class="rightsection">
                 <img src="sri3.png.webp" alt="Srishti Bhatt">
             </div>
         </section>
 
-        <hr>
-
-        <!-- Video Section for Introduction -->
-        <section class="video-section">
-            <video controls>
-                <source src="intro_video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
-
-        <hr>
-
         <!-- About Section -->
         <section id="about" class="about">
             <h1>About Me</h1>
+            <!-- Video Section for Introduction -->
+            <section class="video-section">
+                <video controls>
+                    <source src="intro_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
             <p><strong>Education:</strong></p>
-            <p>Srishti Bhatt is a passionate Computer Science Engineering student at Graphic Era Hill University with a strong background in programming languages like C, C++, and Python. She has participated in renowned events such as the Google Girl Hackathon and qualified for the AlgoUniversity Tech Fellowship. Srishti is also an active contributor to GirlScript Summer of Code (GSSoc)-2024 and has worked on impactful projects like the Cyber Safe Cafe Management System and Smart PhoneBook application.
-
-            </br>  In addition to her technical skills, Srishti serves as a Campus Ambassador for the EDC Cell of IIT Delhi, where she fosters innovation and entrepreneurship among her peers. She also holds leadership roles, such as being the Deputy Secretary General at DSBMUN. With a passion for public speaking, nature exploration, and problem-solving, Srishti is committed to continuous learning and is poised to make a meaningful impact in the tech and entrepreneurial spaces.
-                
-            </p>
-                
+            <p>Srishti Bhatt is a passionate Computer Science Engineering student at Graphic Era Hill University with a strong background in programming languages like C++ and Python. She is eager to learn and build innovative solutions in the tech field.</p>
         </section>
-
-        <hr>
 
         <!-- Achievements Section -->
         <section id="achievements" class="achievements">
             <h1>Achievements</h1>
             <ul>
-                <li>Participated in Google Girl Hackathon and advanced to the coding round.</li>
-                <li>Qualified Stage-1 coding round of the AlgoUniversity Tech Fellowship (Sept 2021).</li>
-                <li>Qualified Stage-1 aptitude test, Round 1 of Naukri Campus Young Turk.</li>
-                <li>Innovative Idea selected at the State Level by the National Innovation Foundation (Dec 2020).</li>
-                <li>Certified B Certificate Holder of National Service Scheme (NSS).</li>
-                <li>Contributor at GirlScript Summer of Code (GSSoC) 2024.</li>
-                <li>Appointed as Deputy Secretary General at DSBMUN.</li>
-                <li>Completed "Exploring the Relationship between UI and UX Design" by Infosys Springboard.</li>
+                <li>Winner of XYZ Hackathon 2024</li>
+                <li>Completed an internship at ABC Technologies</li>
+                <li>Dean's List for three consecutive semesters</li>
             </ul>
         </section>
-
-        <hr>
 
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <h1>Projects</h1>
             <ul>
-                <li><strong>Cyber Safe Cafe Management System:</strong> Developed a secure and efficient management system to control internet usage in cyber cafes using Python, MySQL. Enhanced cybersecurity and reduced privacy issues by 30%.</li>
-                <li><strong>Smart PhoneBook:</strong> A phonebook application built in C using arrays, structures, and basic algorithms (sorting, searching) for efficient contact management.</li>
-                <li><strong>MyCV Search:</strong> A Google clone created using HTML and CSS, which redirects any search to my resume.</li>
-                <li><strong>Breast Cancer Prediction Model (in progress):</strong> Currently developing a model to predict breast cancer using machine learning techniques.</li>
+                <li><strong>Project 1:</strong> Personal Website</li>
+                <li><strong>Project 2:</strong> AI-powered Chatbot</li>
+                <li><strong>Project 3:</strong> Data Visualization Dashboard</li>
             </ul>
         </section>
-
-        <hr>
 
         <!-- Resume Section -->
         <section id="resume" class="resume-section">
             <h1>Resume</h1>
-            <p>You can download my resume here:</p>
-            <a href="Srishti_Bhatt_Resume.pdf" download>Download Resume</a>
+            <p>You can view and download my full resume <a href="resume.pdf" target="_blank">here</a>.</p>
         </section>
-
-        <hr>
 
         <!-- Contact Section -->
         <section id="contact" class="contact">
-            <h1>Contact Me</h1>
-            <!-- Contact Form -->
-            <form action="submit_form.php" method="POST">
-                <input type="text" class="form-input" name="name" placeholder="Your Name" required>
-                <input type="email" class="form-input" name="email" placeholder="Your Email" required>
-                <textarea class="form-input" name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
+            <h1>Contact</h1>
+            <form>
+                <input class="form-input" type="text" name="name" placeholder="Your Name" required><br>
+                <input class="form-input" type="email" name="email" placeholder="Your Email" required><br>
+                <textarea class="form-input" name="message" placeholder="Your Message" rows="5" required></textarea><br>
+                <button class="submit-btn" type="submit">Submit</button>
             </form>
-
-            <!-- Contact Info Section -->
-            <div class="contact-info">
-                <h2>Alternatively, you can reach me through:</h2>
-                <ul>
-                    <li><strong>Email:</strong> <a href="mailto:srishtibhatt100@gmail.com" style="color: cyan;">srishtibhatt100@gmail.com</a></li>
-                    <li><strong>Phone:</strong> <a href="tel:+919548121588" style="color: cyan;">9548121588</a></li>
-                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/srishti-bhatt-60a3ba220/" target="_blank" style="color: cyan;">LinkedIn</a></li>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/srishti-bhatt-25" target="_blank" style="color: cyan;">GitHub</a></li>
-                    <li><strong>Instagram:</strong> <a href="https://www.instagram.com/sri._.krise/" target="_blank" style="color: cyan;">Instagram</a></li>
-                </ul>
-            </div>
         </section>
     </main>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['<i>I am a Quick Learner</i> ', '&amp; I have a passion for Creativity!'],
-            typeSpeed: 60,
-        });
-    </script>
+    <footer>
+        <p>&copy; 2025 Srishti Bhatt. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
