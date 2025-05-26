@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srishti Bhatt Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(34, 125, 190);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(5, 5, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: cyan;
+            font-size: 1.08rem;
+        }
+
+        nav ul li .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(5, 5, 62);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        nav ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        nav ul li .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav ul li .dropdown-content a:hover {
+            color: cyan;
+            background-color: rgb(3, 11, 61);
+        }
+
+        main hr {
+            background-color: rgb(13, 13, 79);
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 23px 0;
+        }
+
+        .firstsection>div {
+            width: 60%;
+            margin: 60px;
+        }
+
+        .leftsection {
+            font-size: 3rem;
+            justify-content: center;
+            margin: 80px 0;
+        }
+
+        .rightsection img {
+            width: 650px;
+            margin: auto;
+        }
+
+        .purple {
+            color: rgb(3, 11, 61);
+        }
+
+        .secondsection, .about, .contact, .achievements, .projects, .resume-section {
+            max-width: 80vw;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .achievements ul, .projects ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .achievements li, .projects li {
+            margin: 10px 0;
+        }
+
+        .resume-section a {
+            color: cyan;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .resume-section a:hover {
+            text-decoration: underline;
+        }
+
+        .form-input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-btn {
+            background-color: rgb(3, 11, 61);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: rgb(34, 125, 190);
+        }
+
+        .about {
+            color: rgb(9, 9, 76);
+        }
+
+        .achievements {
+            color: rgb(32, 6, 73);
+        }
+
+        .contact {
+            color: rgb(4, 4, 64);
+        }
+
+        .resume-section {
+            color: rgb(8, 8, 60);
+        }
+
+        .projects {
+            color: rgb(4, 5, 64);
+        }
+
+        /* Animation for typing effect */
+        .typing-effect {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: rgb(3, 11, 61);
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0; /* Initially width is 0 to start animation */
+            display: inline-block;
+        }
+
+        .typing-effect span {
+            border-right: 3px solid cyan;
+            animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* New Video Section */
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .video-section video {
+            width: 320px; /* Portrait video size */
+            height: 560px;
+            object-fit: cover; /* Ensures it maintains aspect ratio */
+            border-radius: 10px;
+        }
+
+        /* New Dropdown Section */
+        nav ul li .dropdown-content a {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">SRISHTI'S PORTFOLIO</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- New Dropdown Section for Learnings -->
+                    <li>
+                        <a href="#">Learnings</a>
+                        <div class="dropdown-content">
+                            <a href="week1.html">Week 1</a>
+                            <a href="week2.html">Week 2</a>
+                            <a href="week3.html">Week 3</a>
+                            <a href="#">Week 4</a>
+                            <a href="#">Week 5</a>
+                            <a href="#">Week 6</a>
+                            <a href="#">Week 7</a>
+                            <a href="#">Week 8</a>
+                            <a href="#">Week 9</a>
+                            <a href="#">Week 10</a>
+                            <a href="#">Week 11</a>
+                            <a href="#">Week 12</a>
+                            <a href="#">Week 13</a>
+                            <a href="#">Week 14</a>
+                            <a href="#">Week 15</a>
+                        </div>
+                    </li>
+                    <!-- New Dropdown Section for Assignments -->
+                    <li>
+                        <a href="#">Assignments</a>
+                        <div class="dropdown-content">
+                            <a href="assignment1.html">Assignment 1</a>
+                            <a href="assignment2.html">Assignment 2</a>
+                            <a href="assignment3.html">Assignment 3</a>
+                            <a href="assignment4.html">Assignment 4</a>
+                            <a href="assignment5.html">Assignment 5</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple"></br>
+                    <h3>Srishti Bhatt</h3>
+                </span>
+                <div class="typing-effect">
+                    <span id="element">I am a passionate computer science enthusiast!</span>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="sri3.png.webp" alt="Srishti Bhatt">
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h1>About Me</h1>
+            <p><strong>Summary</strong></p>
+            <p>Greetings!
+                I am Srishti Bhatt, and I am currently pursuing B.Tech CSE from
+                Graphic Era Hill University, Dehradun. I am passionate about
+                exploring new things and have a keen interest in programming.
+                My goal is to decode real-world problems through innovative and
+                effective solutions.
+                I am constantly learning and taking steps to improve my skills in
+                programming and problem-solving. I believe that with the right
+                guidance and opportunities, I can make a significant impact in the
+                tech industry.
+                I am eager to connect with professionals and mentors who can
+                provide insights and guidance to help me grow in my career. Let's
+                connect and explore opportunities to learn and collaborate.</p>
+            <p>Srishti Bhatt is a passionate Computer Science Engineering student at Graphic Era Hill University with a strong background in programming languages like C++ and Python. She is eager to learn and build innovative solutions in the tech field.</p>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements">
+            <h1>Achievements</h1>
+            <ul>
+                <p> * Qualified for State Level Inspire Innovative Idea by government of India.
+                    * Certificate holer for Infosys Springboard "Exploring the Relationship between UI and UX Design"
+                    * Awarded AWS Skill Builder Program certificate.
+                    * Google Cloud Computing Foundation certificate by IIT Kharagpur
+                    * Qualified Naukri Campus Young Turks Aptitude Test || Round 1</p>
+            </ul>
+        </section>
+
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section">
+            <h1>Resume</h1>
+            <p>You can view and download my full resume <a href="Srishti_Bhatt_Resume.pdf" target="_blank">here</a>.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h1>Contact</h1>
+            <form>
+                <input class="form-input" type="text" name="name" placeholder="Your Name" required><br>
+                <input class="form-input" type="email" name="email" placeholder="Your Email" required><br>
+                <textarea class="form-input" name="message" placeholder="Your Message" rows="5" required></textarea><br>
+                <button class="submit-btn" type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Srishti Bhatt. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
